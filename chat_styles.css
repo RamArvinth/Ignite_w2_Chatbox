@@ -5,11 +5,14 @@
   width: 400px;
   border: 3px solid black;
   background-color: black;
+  justify-self:center;
 }
 
 .chat-block {
   display: inline-flex;
   justify-content: center;
+  position: relative;
+  margin-bottom: 15px;
 }
 
 .chat-page .chat-block #msg-1,
@@ -56,4 +59,59 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+
+.msg-1-triangle {
+  display: block;
+  position: absolute;
+  top:0; bottom:0; left: 296px;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 12px;
+  border-color: transparent transparent transparent #25d366;
+}
+
+.msg-2-triangle {
+  display: block;
+  position: absolute;
+  top:0; bottom:0; right: 296px;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 12px 10px 0;
+  border-color: transparent #25d366 transparent transparent;
+}
+
+.msg-1-senttime {
+  display: block;
+  position: absolute;
+  bottom: -10px; left: 30px;
+  color: white;
+  transform: translateY(-20px);
+  opacity: 0;
+  z-index: 1;
+  user-select: none;
+  transition: transform 0.2s, opacity 0.1s;
+}
+
+.msg-2-senttime {
+  display: block;
+  position: absolute;
+  bottom: -10px; right: 30px;
+  color: white;
+  transform: translateY(-20px);
+  opacity: 0;
+  z-index: 1;
+  user-select: none;
+  transition: transform 0.2s, opacity 0.1s;
+}
+
+.chat-block:hover .msg-1-senttime,
+.chat-block:hover .msg-2-senttime {
+  transform: translateX(0);
+  opacity: 1;
 }
