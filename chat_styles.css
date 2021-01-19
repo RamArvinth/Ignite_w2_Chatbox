@@ -112,6 +112,6 @@
 
 .chat-block:hover .msg-1-senttime,
 .chat-block:hover .msg-2-senttime {
-  transform: translateX(0);
+  transform: translateY(0px);
   opacity: 1;
 }
