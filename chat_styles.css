@@ -1,47 +1,59 @@
-
 .chat-page {
-    display: flex;
-    flex-direction: column;
-    height: 400px;
-    width: 400px;
-    border: 3px solid black;
-    background-color: black;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 400px;
+  border: 3px solid black;
+  background-color: black;
 }
 
 .chat-block {
-    display: inline-flex;
-    justify-content: center;
+  display: inline-flex;
+  justify-content: center;
 }
 
-.chat-page .chat-block #msg-1, #msg-2, #msg-3 {
-    height: 80%;
-    width: 300px;
-    text-align: left;
-    border-radius: 10px;    
-    box-sizing: border-box;
-    padding: 2%;
-    margin: 2%;
-    background-color: #25D366;
+.chat-page .chat-block #msg-1,
+#msg-2,
+#msg-3 {
+  height: 80%;
+  width: 300px;
+  text-align: left;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 2%;
+  margin: 2%;
+  background-color: #25d366;
 }
 
+.chat-page .chat-block #msg-1 #msg-1-sender,
+#msg-3 #msg-3-sender {
+  font-size: 18px;
+  font-weight: bold;
+  color: darkblue;
+}
 
-.chat-page .chat-block #person-1, #person-2 {
-    width: 70px;
-    height: 70px;
-    border: 6px solid chartreuse;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 2%;
+.chat-page .chat-block #msg-2 #msg-2-sender {
+  font-size: 18px;
+  font-weight: bold;
+  color: chocolate;
+}
+.chat-page .chat-block #person-1,
+#person-2 {
+  width: 70px;
+  height: 70px;
+  border: 6px solid darkblue;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 2%;
 }
 
 .chat-page .chat-block #person-2 {
-    border: 6px solid chocolate;
+  border: 6px solid chocolate;
 }
 
 .chat-page .chat-block #person-1 .person-1-image,
 #person-2 .person-2-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-
